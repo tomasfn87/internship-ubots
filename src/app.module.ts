@@ -8,7 +8,7 @@ import { MoviesModule } from './movies/movies.module';
   imports: [
     MoviesModule,
     MongooseModule.forRoot(
-      `mongodb+srv://${process.env.MONGO_ATLAS_USER}:${process.env.MONGO_ATLAS_PASSWORD}@cluster0.suflu.mongodb.net/${process.env.MONGO_ATLAS_DB}?retryWrites=true&w=majority`
+      `mongodb+srv://${process.env.MONGO_ATLAS_USER}:${process.env.MONGO_ATLAS_PASSWORD}@cluster0.z0mml.mongodb.net/${process.env.MONGO_ATLAS_DB}?retryWrites=true&w=majority`
     )
   ],
   controllers: [AppController],
