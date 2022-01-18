@@ -1,0 +1,15 @@
+Download Nest.js:
+npm i -g @nestjs/cli
+
+Start a Nest.js project:
+nest new internship-ubots
+
+Add mongoose:
+npm i mongoose @nestjs/mongoose
+
+To execute:
+nest start
+
+nest g controller movies
+nest g service movies
+nest g module movies
