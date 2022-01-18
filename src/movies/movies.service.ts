@@ -8,29 +8,42 @@ import { Movie } from './movie.model';
 export class MoviesService {
     constructor(@InjectModel('Movie') private readonly movieModel: Model<Movie>) {}
   /**
-   /* Create a new movie
-   * @param name
+  /* Create a new movie
+   * @param title
    * @param year
    * @param director
    * @param minutes
    * @param age_rating
+   * @param rating
    * @param stars
+   * @param genre
    * @param countries
    * @param languages
    */
     async create(
-        name: string,
+        title: string,
         year: number,
         director: string,
         minutes: number,
         age_rating: number,
+        rating: number,
         stars: Object,
+        genre: Object,
         countries: Object,
         languages: Object
 
   ): Promise<Movie> {
     const createdMovie = new this.movieModel({
-        name, year, director, minutes, age_rating, stars, countries, languages
+        title,
+        year,
+        director,
+        minutes,
+        age_rating,
+        rating,
+        genre,
+        stars,
+        countries,
+        languages
     });
     return createdMovie.save();
   }

@@ -13,22 +13,26 @@ export class MoviesController {
 
     @Post()
     async create(
-        @Body('name') name: string,
+        @Body('title') title: string,
         @Body('year') year: number,
         @Body('director') director: string,
         @Body('minutes') minutes: number,
         @Body('age_rating') age_rating: number,
+        @Body('rating') rating: number,
         @Body('stars') stars: string[],
+        @Body('genre') genre: string[],
         @Body('countries') countries: string[],
-        @Body('languages') languages: string[],
+        @Body('languages') languages: string[]
     ) {
         const generatedId = await this.moviesService.create(
-            name,
+            title,
             year,
             director,
             minutes,
             age_rating,
+            rating,
             stars,
+            genre,
             countries,
             languages
         )
