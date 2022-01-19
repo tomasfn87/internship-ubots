@@ -1,7 +1,7 @@
 <!---
 
-internship-ubots
-----------------
+movie-api
+---------
 
 * Nest.js REST API with mongoDb
 
