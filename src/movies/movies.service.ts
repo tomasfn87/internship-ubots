@@ -27,10 +27,10 @@ export class MoviesService {
         minutes: number,
         age_rating: number,
         rating: number,
-        stars: Object,
-        genre: Object,
-        countries: Object,
-        languages: Object
+        stars: string[],
+        genre: string[],
+        countries: string[],
+        languages: string[]
 
   ): Promise<Movie> {
     const createdMovie = new this.movieModel({
@@ -49,15 +49,41 @@ export class MoviesService {
   }
 
   async findAll(): Promise<Movie[]> {
-    return this.movieModel.find().exec();
+    const allMovies = await this.movieModel.find().exec();
+    
+    /* O loop "for" abaixo tem por objetivo verificar se o campo
+     * "rating" de cada filme da lista de filmes obtida é igual a zero;
+    * em caso positivo, será impressa uma mensagem informando que o 
+    * filme ainda não foi classificado. 
+    */
+    for (let movie of allMovies) {
+      if (movie['rating'] === 0) {
+        console.log(`The movie "${movie['title']}" wasn't rated yet...`);
+      }
+    }
+
+    return allMovies;
   }
 
   async findById(id: string): Promise<Movie> {
-      return await this.movieModel.findById(id).exec();
+      const movie = await this.movieModel.findById(id).exec();
+
+      /* De forma análoga, o "if" abaixo verificará se o filme em
+       * questão foi ou não classificado, imprimindo uma mensagem
+       * em caso negativo.
+       */
+      if (movie['rating'] === 0) {
+        console.log(`The movie "${movie['title']}" wasn't rated yet...`);
+      }
+
+      return movie
   }
 
   async update(id: string, movie: Movie): Promise<Movie> {
-    return await this.movieModel.findByIdAndUpdate(id, movie, { new: true }).exec();
+    return await this.movieModel.findByIdAndUpdate(
+      id,
+      movie,
+      { new: true }).exec();
   }
 
   async delete(id: string): Promise<Movie> {
