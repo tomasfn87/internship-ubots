@@ -2,7 +2,9 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  home(): string {
+    return (
+      '<a href="http://localhost:3000/movies">List all movies</a>'
+    );
   }
 }

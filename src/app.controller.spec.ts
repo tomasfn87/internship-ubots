@@ -15,8 +15,10 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return "<a href="http://localhost:3000/movies">List all movies</a>', () => {
+      expect(appController.home()).toBe(
+        '<a href="http://localhost:3000/movies">List all movies</a>'
+      );
     });
   });
 });
