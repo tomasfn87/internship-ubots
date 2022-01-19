@@ -1,14 +1,19 @@
-<!---
-
-movie-api
----------
-
-* Nest.js REST API with mongoDb
-
-UBots
------
-Projeto para participação no processo seletivo para Estágio em Desenvolvimento de Software 
---->
+<p align="center">
+  <h3>movie-api</h3>
+  <ul>
+    <li>
+      Nest.js REST API with mongoDb Atlas Cloud Db
+    </li>
+    <li>
+      Ubots
+      <ul>
+        <li>
+          Projeto para participação no processo seletivo para Estágio em Desenvolvimento de Software
+        </li>
+      </ul>
+    </li>
+  </ul>
+</p>
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
