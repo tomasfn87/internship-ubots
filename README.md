@@ -1,5 +1,5 @@
 <p align="center">
-  <h3>movie-api</h3>
+  <h3>movies-api</h3>
   <ul>
     <li>
       Nest.js REST API with mongoDb Atlas Cloud Db
@@ -11,6 +11,26 @@
           Projeto para participação no processo seletivo para Estágio em Desenvolvimento de Software
         </li>
       </ul>
+    </li>
+    <li>
+      Para rodar o projeto, é necessário ter instalado os pacotes "node", "docker" e "docker-compose"
+    </li>
+    <li>
+      O mongoDb Atlas é um serviço de banco de dados em nuvem, dispensando instalação
+    </li>
+    <li>
+      Após feito o download do projeto através do comando 'git clone https://github.com/tomasfn87/movies-api', executar os comandos:
+      <ul>
+        <li>
+          npm i
+        </li>
+        <li>
+          sudo docker-compose up
+        </li>
+      </ul>
+    </li>
+    <li>
+      É possível acessar alguns recursos da API pela página http://localhost:3000
     </li>
   </ul>
 </p>
